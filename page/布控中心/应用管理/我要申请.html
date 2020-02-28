@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link href="../../../static/css/style.css" rel="stylesheet" type="text/css">
+    <title>我要申请</title>
+</head>
+<body>
+    <section class="wrap">
+        <!--头部信息-->
+        <header>
+            <a href="../../index.html" class="logo">
+                <img src="../../../static/img/icon/header-logo.png" alt="">
+                <span>虹口一标六实警用地理信息系统</span>
+            </a>
+
+            <ul class="nav">
+                <li>
+                    <a href="../../基础管理/index.html"><i class="item-01"></i>基础管理</a>
+                </li>
+                <li>
+                    <a href="../../数据中心/index.html"><i class="item-02"></i>数据中心</a>
+                </li>
+                <li>
+                    <a href="../../预警中心/index.html"><i class="item-03"></i>预警中心</a>
+                </li>
+                <li class="active">
+                    <a href="../../布控中心/应用管理/应用申请.html"><i class="item-04"></i>布控中心</a>
+                </li>
+                <li>
+                    <a href="../../日志中心/index.html"><i class="item-05"></i>日志中心</a>
+                </li>
+                <li>
+                    <a href="../../勤务管理/index.html"><i class="item-06"></i>勤务管理</a>
+                </li>
+                <li>
+                    <a href="../../任务中心/index.html"><i class="item-07"></i>任务中心</a>
+                </li>
+                <li>
+                    <a href="../../消息中心/index.html"><i class="item-08"></i>消息中心</a>
+                </li>
+            </ul>
+
+            <ul class="user_part">
+                <li><a href="javascript:" class="user" title="个人中心"></a></li>
+                <li><a href="javascript:" class="return" title="返回前台"></a></li>
+                <li><a href="../../login.html" class="logout" title="退出账号"></a></li>
+            </ul>
+        </header>
+
+        <!--内容区域-->
+        <div class="content_wrap">
+            <aside>
+                <div class="aside_title">
+                    <div class="title_img"><img src="../../../static/img/icon/header-nav-item-04.png" alt=""></div>
+                    <p>布控中心</p>
+                </div>
+                <div class="tree_wrap">
+                    <ul class="tree">
+                        <li>
+                            <p class="active">应用管理</p>
+                            <ol style="display: block">
+                                <li>
+                                    <a href="../应用管理/应用申请.html" class="active">应用申请</a>
+                                </li>
+                                <li>
+                                    <a href="../应用管理/应用管理.html">应用管理</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>布控管理</p>
+                            <ol>
+                                <li><a href="../布控管理/布控中心.html">布控中心</a></li>
+                                <li><a href="../布控管理/撤销查询.html">撤销查询</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p >处置管理</p>
+                            <ol >
+                                <li><a href="../处置管理/实时处置.html">实时处置</a></li>
+                                <li><a href="../处置管理/处置查询.html">处置查询</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>系统管理</p>
+                            <ol >
+                                <li><a href="../系统管理/布控库管理.html">布控库管理</a></li>
+                                <li><a href="../系统管理/角色权限.html">角色权限</a></li>
+                                <li><a href="../系统管理/标签管理.html">标签管理</a></li>
+                                <li><a href="../系统管理/布控级别.html">布控级别</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <button class="slideBtn"></button>
+            </aside>
+            <div class="right_part">
+                <div class="content">
+                    <!--面包屑导航-->
+                    <div class="crumb_wrap">
+                        <p class="crumb">
+                            <a>布控中心</a>
+                            >
+                            <a>应用管理</a>
+                            >
+                            <a href="应用申请.html">应用申请</a>
+                            >
+                            <a href="#">我要申请</a>
+                        </p>
+                        <p class="decorateLine"></p><!--装饰线-->
+                    </div>
+
+                    <!--自定义内容区域-->
+                    <div class="content_form_wrap">
+                        <h5 class="content_form_title">我要申请</h5>
+                        <form class="content_form">
+                            <label class="label">
+                                <span>应用名称：</span>
+                                <input type="text">
+                            </label>
+                            <label class="label flexTop">
+                                <span>应用说明：</span>
+                                <textarea name=""></textarea>
+                            </label>
+                            <div class="label">
+                                <span>布控库：</span>
+                                <p class="libBtn btn-type-01">选择布控库 (<b>3</b>)</p>
+                            </div>
+                        </form>
+                        <div class="btnWrap">
+                            <button class="btn-type-02">提交</button>
+                            <a href="javascript:history.back(-1)" class="btn-type-03">返回</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--选择布控库弹窗-->
+        <div class="layer-02 treeContentLayer">
+            <i class="close_btn"></i>
+            <div class="layer_content">
+                <div class="left_part">
+                    <div class="treeWrap">
+                        <ul class="tree">
+                            <li>
+                                <a href="javascript:">虹口公安分局</a>
+                                <ol>
+                                    <li>
+                                        <a href="javascript:">江湾派出所</a>
+                                        <ol>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="javascript:">虹口公安分局</a>
+                                <ol>
+                                    <li>
+                                        <a href="javascript:">江湾派出所</a>
+                                        <ol>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="javascript:">虹口公安分局</a>
+                                <ol>
+                                    <li >
+                                        <a href="javascript:">江湾派出所</a>
+                                        <ol>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                            <li class="noChild">
+                                                <a href="javascript:">科技科</a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right_part">
+                    <form class="form">
+                        <label class="label">
+                            <input type="text" placeholder="请输入关键字">
+                        </label>
+                        <button>检索</button>
+                    </form>
+                    <div class="tableWrap">
+                        <table class="table">
+                            <tr>
+                                <th><i class="checkBoxAll"></i></th>
+                                <th>库名</th>
+                                <th>单位</th>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>涉恐人员库</td>
+                                <td>北外滩派出所</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="total_num">已选择 <b>2</b> 个库</p>
+                    <div class="layer_btn">
+                        <button class="btn-type-02">确定</button>
+                        <button class="btn-type-03">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="../../../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/lib/layer/layer.js"></script>
+    <script type="text/javascript" src="../../../static/js/app/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/app/layerOption.js"></script>
+    <script>
+        $(function () {
+
+            //选择布控库弹窗
+            $('.libBtn').on('click',function () {
+                let content = $('.treeContentLayer'),
+                    option = {
+                        content:content,
+                        title:'选择布控库',
+                        shade:0.5,
+                        area:['1111px','966px']
+                    };
+                let index = openLayer(option);
+
+                //关闭弹窗
+                $('.treeContentLayer .close_btn').on('click',function () {
+                    closeLayer(index);
+                });
+            });
+
+
+            //组织树
+            $('.treeContentLayer .tree').on('click','li',function (e) {
+                e.stopPropagation();
+                let active = !$(this).hasClass('active'),
+                    hasChild = !$(this).hasClass('noChild');
+                if(hasChild){
+                    if(active){
+                        $(this).addClass('active').children('ol').slideDown();
+
+                    }else{
+                        $(this).removeClass('active').children('ol').slideUp();
+                    }
+                }else{
+                    $(this).addClass('yellow').siblings('.noChild').removeClass('yellow');
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../../../static/js/lib/zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link href="../../../static/css/style.css" rel="stylesheet" type="text/css">
+    <title>处置查询</title>
+</head>
+<body>
+    <section class="wrap">
+        <!--头部信息-->
+        <header>
+            <a href="../../index.html" class="logo">
+                <img src="../../../static/img/icon/header-logo.png" alt="">
+                <span>虹口一标六实警用地理信息系统</span>
+            </a>
+
+            <ul class="nav">
+                <li>
+                    <a href="../../基础管理/index.html"><i class="item-01"></i>基础管理</a>
+                </li>
+                <li>
+                    <a href="../../数据中心/index.html"><i class="item-02"></i>数据中心</a>
+                </li>
+                <li>
+                    <a href="../../预警中心/index.html"><i class="item-03"></i>预警中心</a>
+                </li>
+                <li class="active">
+                    <a href="../../布控中心/应用管理/应用申请.html"><i class="item-04"></i>布控中心</a>
+                </li>
+                <li>
+                    <a href="../../日志中心/index.html"><i class="item-05"></i>日志中心</a>
+                </li>
+                <li>
+                    <a href="../../勤务管理/index.html"><i class="item-06"></i>勤务管理</a>
+                </li>
+                <li>
+                    <a href="../../任务中心/index.html"><i class="item-07"></i>任务中心</a>
+                </li>
+                <li>
+                    <a href="../../消息中心/index.html"><i class="item-08"></i>消息中心</a>
+                </li>
+            </ul>
+
+            <ul class="user_part">
+                <li><a href="javascript:" class="user" title="个人中心"></a></li>
+                <li><a href="javascript:" class="return" title="返回前台"></a></li>
+                <li><a href="../../login.html" class="logout" title="退出账号"></a></li>
+            </ul>
+        </header>
+
+        <!--内容区域-->
+        <div class="content_wrap">
+            <aside>
+                <div class="aside_title">
+                    <div class="title_img"><img src="../../../static/img/icon/header-nav-item-04.png" alt=""></div>
+                    <p>布控中心</p>
+                </div>
+                <div class="tree_wrap">
+                    <ul class="tree">
+                        <li>
+                            <p >应用管理</p>
+                            <ol >
+                                <li>
+                                    <a href="../应用管理/应用申请.html">应用申请</a>
+                                </li>
+                                <li>
+                                    <a href="../应用管理/应用管理.html"  >应用管理</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p >布控管理</p>
+                            <ol >
+                                <li><a href="../布控管理/布控中心.html" >布控中心</a></li>
+                                <li><a href="../布控管理/撤销查询.html">撤销查询</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="active">处置管理</p>
+                            <ol style="display: block">
+                                <li><a href="../处置管理/实时处置.html" >实时处置</a></li>
+                                <li><a href="../处置管理/处置查询.html" class="active">处置查询</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>系统管理</p>
+                            <ol >
+                                <li><a href="../系统管理/布控库管理.html">布控库管理</a></li>
+                                <li><a href="../系统管理/角色权限.html">角色权限</a></li>
+                                <li><a href="../系统管理/标签管理.html">标签管理</a></li>
+                                <li><a href="../系统管理/布控级别.html">布控级别</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <button class="slideBtn"></button>
+            </aside>
+            <div class="right_part">
+                <div class="content">
+                    <!--面包屑导航-->
+                    <div class="crumb_wrap">
+                        <p class="crumb">
+                            <a>布控中心</a>
+                            >
+                            <a>处置管理</a>
+                            >
+                            <a href="#">处置查询</a>
+                        </p>
+                        <p class="decorateLine"></p><!--装饰线-->
+                    </div>
+
+                    <ul class="content_tab">
+                        <li class="active"><a href="javascript:">人员查询</a></li>
+                        <li><a href="javascript:">车辆查询</a></li>
+                    </ul>
+
+                    <!--搜索条件-->
+                    <div class="form_wrap">
+                        <form class="form">
+                            <div class="label_part">
+                                <label class="label">
+                                    <span>关键字</span><input type="text">
+                                </label>
+                                <div class="label">
+                                    <span>选择来源</span>
+                                    <select>
+                                        <option value="">来源</option>
+                                    </select>
+                                </div>
+                                <div class="label">
+                                    <span>选择分类</span>
+                                    <select>
+                                        <option value="">分类</option>
+                                    </select>
+                                </div>
+                                <label class="label">
+                                    <span>时间选择</span><input type="text" class="layDate">
+                                </label>
+                            </div>
+                            <button>检 索</button>
+                        </form>
+                    </div>
+
+                    <!--数据表格-->
+                    <div class="table_wrap">
+                        <table class="table">
+                            <tr>
+                                <th width="3%"><i class="checkBoxAll"></i></th>
+                                <th>身份证号</th>
+                                <th>姓名</th>
+                                <th>要求</th>
+                                <th>分类</th>
+                                <th>来源</th>
+                                <th>照片</th>
+                                <th>人像轨迹</th>
+                                <th>证件轨迹</th>
+                                <th>物品轨迹</th>
+                                <th>应用名称</th>
+                                <th>所属部门</th>
+                                <th>提交时间</th>
+                            </tr>
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+                            <tr>
+                                <td><i class="checkBox"></i></td>
+                                <td>497356397683095493543</td>
+                                <td><a href="布控详情.html" class="link">王军宁</a></td>
+                                <td>要求要求要求要求要求要求</td>
+                                <td>分类分类分类分类</td>
+                                <td>来源来源来源</td>
+                                <td><img src="../../../static/img/demo/face.png" alt=""></td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>有</td>
+                                <td>一标六十</td>
+                                <td>科技科</td>
+                                <td>2020.02.27  12:00:00</td>
+                            </tr>
+
+
+                        </table>
+                        <div class="pagination">
+                            <label class="num_select">
+                                <select>
+                                    <option value="">每页 20 条</option>
+                                    <option value="">每页 50 条</option>
+                                    <option value="">每页 100 条</option>
+                                </select>
+                            </label>
+                            <ul>
+                                <li><a href="#"><i> &lt; </i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#" class="noBg">...</a></li>
+                                <li><a href="#">49</a></li>
+                                <li><a href="#"><i> &gt; </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="toolbar">
+                    <ul>
+                        <li><i class="icon-export"></i>导出</li>
+                        <li><a href="地图模式.html"><i class="icon-map"></i>地图模式</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="../../../static/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/lib/laydate/laydate.js"></script>
+    <script type="text/javascript" src="../../../static/js/lib/zTree_v3-master/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../../../static/js/lib/zTree_v3-master/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../../../static/js/app/public.js"></script>
+    <script>
+        $(function () {
+            lay('.layDate').each(function(){
+                laydate.render({
+                    elem: this
+                    ,trigger: 'click'
+                    ,range:true
+                });
+            });
+
+        })
+    </script>
+</body>
+</html>
