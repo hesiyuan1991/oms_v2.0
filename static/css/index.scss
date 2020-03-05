@@ -1,0 +1,282 @@
+/**
+
+
+  scss 文件 edit by tx.Sean 用于维护 for 大平台后台重构
+
+  首页、登陆页样式表
+
+
+  **/
+@import "_public";
+
+.login_wrap{
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/icon/bg-login.jpg") no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: px2vw(16);
+  justify-content: center;
+  h1{
+    text-shadow: 0 5px 17px rgba(0,0,0,0.46);
+    font-family: MFLiHei,sans-serif;
+    flex-shrink: 0;
+    font-size: px2vw(45);
+    letter-spacing: px2vw(5.95);
+    background-image: -webkit-linear-gradient(top, #ffffff, #96c7e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .login_box{
+    width: px2vw(902);
+    height: px2vw(902);
+    flex-shrink: 0;
+    background: url("../img/icon/login-circle-01.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    &::before,&::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
+    &::after{
+      background-image: url("../img/icon/login-circle-02.png");
+      animation: rotateZ 3s ease infinite;
+    }
+    &::before{
+      background-image: url("../img/icon/login-circle-03.png");
+      animation: rotateZ 5s linear infinite reverse;
+    }
+    .login_box_wrap{
+      width: px2vw(629);
+      height: px2vw(629);
+      @include center;
+      z-index: 333;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content:flex-start;
+      padding-top: px2vw(86);
+      .badge{
+        width: px2vw(69);
+        height: px2vw(67);
+        flex-shrink: 0;
+        background: url("../img/icon/badge.png") no-repeat;
+        background-size: contain;
+        margin-bottom: px2vw(62);
+      }
+      .login_form{
+        label{
+          display: block;
+          position: relative;
+          width: px2vw(393);
+          height: px2vw(52);
+          margin-bottom: px2vw(41);
+          &::before{
+            content: '';
+            position: absolute;
+            left: px2vw(26);
+            top: 50%;
+            transform: translateY(-50%);
+            width: px2vw(25);
+            height: px2vw(25);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+          }
+          &.user{
+            &::before{
+              background-image: url("../img/icon/icon-user.png");
+            }
+          }
+          &.password{
+            &::before{
+              background-image: url("../img/icon/icon-password.png");
+            }
+          }
+          input{
+            background: rgba(17,26,40,0.60);
+            box-shadow: 0 0 px2vw(14) px2vw(2) rgba(0,166,255,0.36);
+            border-radius: px2vw(57);
+            border: 1px solid #26B8FF ;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            padding-left: px2vw(65);
+            font-size: px2vw(20);
+            color: #ffffff;
+          }
+        }
+        button{
+          background: rgba(3,160,244,0.80);
+          box-shadow: 0 0 px2vw(19) px2vw(2) rgba(0,166,255,0.50);
+          border-radius: px2vw(57);
+          width: px2vw(393);
+          height: px2vw(52);
+          cursor: pointer;
+          font-size: px2vw(20);
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.index_wrap{
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/icon/bg-index.jpg") no-repeat;
+  background-size: cover;
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: px2vw(55);
+    &::before,&::after{
+      content: '';
+      flex-shrink: 0;
+      width: px2vw(602);
+      height: px2vw(20);
+      background: url("../img/icon/header-bg-01.png") no-repeat;
+      background-size: cover;
+    }
+    &::before{
+      transform: rotateZ(180deg);
+    }
+    h1{
+      font-family: MFLiHei,sans-serif;
+      flex-shrink: 0;
+      font-size: px2vw(45);
+      letter-spacing: px2vw(2.95);
+      background-image: -webkit-linear-gradient(top, #ffffff, #96D9FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .navList{
+    padding: px2vw(140) px2vw(183) 0;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 25%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: px2vw(104);
+        .top_part{
+          background: rgba(0,0,0,0.45);
+          box-shadow: 0 0 px2vw(9) 1px rgba(0,171,255,0.50);
+          border-radius: px2vw(57);
+          width: px2vw(230);
+          height: px2vw(194);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-bottom: px2vw(64);
+          position: relative;
+          z-index: 2;
+          transition: all ease .7s;
+          i{
+            width: px2vw(109);
+            height: px2vw(109);
+            background-size: contain;
+            background-repeat: no-repeat;
+            &.icon-01{
+              background-image: url("../img/icon/index-nav-icon-01.png");
+            }
+            &.icon-02{
+              background-image: url("../img/icon/index-nav-icon-02.png");
+            }
+            &.icon-03{
+              background-image: url("../img/icon/index-nav-icon-03.png");
+            }
+            &.icon-04{
+              background-image: url("../img/icon/index-nav-icon-04.png");
+            }
+            &.icon-05{
+              background-image: url("../img/icon/index-nav-icon-05.png");
+            }
+            &.icon-06{
+              background-image: url("../img/icon/index-nav-icon-06.png");
+            }
+            &.icon-07{
+              background-image: url("../img/icon/index-nav-icon-07.png");
+            }
+            &.icon-08{
+              background-image: url("../img/icon/index-nav-icon-08.png");
+            }
+          }
+          b{
+            position: absolute;
+            background: #DC3704;
+            padding: 0 px2vw(8);
+            height: px2vw(28);
+            line-height: px2vw(28);
+            font-size: px2vw(20);
+            color: #FFFFFF;
+            left: px2vw(140);
+            top: px2vw(45);
+            border-radius: 50%;
+          }
+        }
+        .bottom_part{
+          position: relative;
+          z-index: 1;
+          &::before{
+            position: absolute;
+            z-index: -1;
+            content: '';
+            width: px2vw(357);
+            height:px2vw(103);
+            background: url("../img/icon/index-bottom-bg.png") no-repeat;
+            background-size: contain;
+            left: 50%;
+            transform: translateX(-50%);
+            top: px2vw(-105);
+          }
+          span{
+            display:block;
+            width: 100%;
+            text-align: center;
+            font-family: MFLiHei,sans-serif;
+            font-size: px2vw(25);
+            color: #69F9F9;
+            letter-spacing: 0;
+            transition: all ease .7s;
+
+          }
+        }
+        &:hover{
+          .top_part{
+            transition: all ease .7s;
+            transform: translateY(-10px);
+            background: rgba(3,160,244);
+            box-shadow: 0 0 px2vw(19) px2vw(2) rgba(0,166,255,0.50);
+            i{
+              filter: brightness(150%);
+            }
+          }
+          .bottom_part{
+            span{
+              color: #D5FFFF;
+              transition: all ease .7s;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
